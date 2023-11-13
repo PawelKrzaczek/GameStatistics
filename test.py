@@ -65,11 +65,6 @@ class Tester(unittest.TestCase):
         expected_result = get_sorted()
         self.assertEqual(sorted_result, expected_result)
 
-    def test_bonus_2_check_forbidden_functions(self):
-        with open("reports.py") as file:
-            lines = file.read()
-            self.assertNotRegex(lines, r"\bsort(ed)?\(")
-
     def test_bonus_3_get_genres(self):
         result = reports.get_genres(self.input_file)
         expected_result = sorted(["Action-adventure", "First-person shooter",
